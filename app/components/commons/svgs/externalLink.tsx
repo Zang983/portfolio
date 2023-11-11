@@ -7,7 +7,8 @@ interface Props {
     
 }
 export const ExternalLink = ({ customStyle }:Props) => {
-    return (<svg
+    return (
+    <svg
         className={customStyle.stroke}
         width={customStyle.width}
         height={customStyle.height}
@@ -20,5 +21,6 @@ export const ExternalLink = ({ customStyle }:Props) => {
             stroke-linecap="round"
             stroke-linejoin="round">
         </path>
-    </svg>)
+    </svg>
+    )
 }

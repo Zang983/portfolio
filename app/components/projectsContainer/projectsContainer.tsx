@@ -74,7 +74,7 @@ export const ProjectsContainer = ({ projectsArray = [] }: Props) => {
                     {projectsArray[selected]?.description}
                 </ProjectContext>
 
-                <Carrousel imagesArray={projectsArray[selected]?.images} />
+                {projectsArray[selected]?.images.length > 0 && <Carrousel imagesArray={projectsArray[selected]?.images} />}
             </CustomDialog>
 
 

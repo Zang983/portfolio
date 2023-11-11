@@ -22,19 +22,20 @@ export const LinkContainer = ({ links, customClass }: Props) => {
             customStyle = "flex gap-10 absolute top-[6%] right-[3%] -translate-y-full"
             customStyleLink = "flex items-center gap-2 bg-[var(--primary-color)] text-[var(--primary-text)] px-3 py-2 rounded-xl text-lg shadow-lg"
             break
-
     }
     return (
         <div className={customStyle}>
-            {links.map((item, index) =>
-                <CustomLink
-                    label={item.label ? item.label : ""}
-                    key={index}
-                    link={item.link}
-                    customStyleLink={customStyleLink}
-                >
-                    {item.image}
-                </CustomLink>
+            {links.map((item, index) => {
+                if (item.link !== "")
+                    return <CustomLink
+                        label={item.label ? item.label : ""}
+                        key={index}
+                        link={item.link}
+                        customStyleLink={customStyleLink}
+                    >
+                        {item.image}
+                    </CustomLink>
+            }
             )}
         </div>
     )
