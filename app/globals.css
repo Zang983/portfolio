@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color:rgb(32, 106, 196);
+  --primary-text:rgb(255,255,255);
+  --secondary-color: rgb(158, 201, 251);
+  --secondary-text: rgb(20, 20, 20);
+  --background-primary-color:rgb(233, 241, 250);
+  --background-text : rgb(20,20,20);
+}
+body {
+  font-family: "Roboto","Times New Roman";
+  color: var(--text-color);
+  background-color: var(--background-primary-color);
+}
+.skillCardContainer div:last-of-type{
+border:none;
+}
+
+   
+dialog[open]:not(.closedDialog) {
+  animation:slideIn ease-in-out 0.8s forwards ;    
+  transform-origin:right ;   
+}
+.closedDialog{
+
+animation:slideOff ease-in-out 0.8s forwards ;
+transform-origin:left ;       
+}
+@keyframes slideIn{
+0%{
+}
+100%{
+  transform:  translateX(-100%);
+}
+}
+@keyframes slideOff{
+0%{
+  transform: translateX(-100%);
+ 
+}
+100%{
+  transform:  translateX(100%);
+}
+}
+
+@keyframes slideInY{
+  0%{
+    transform:  translateY(-100%);
+  }
+  100%{
+    transform:  translateY(0);
+  }
+  }
+
+
+.alertOpen{
+  transform-origin:top ;   
+  animation:slideInY ease-in-out 0.5s forwards ;    
+
+}
