@@ -32,7 +32,7 @@ const ButtonColor = ({ bgColor, theme, isSelected, setSelected, index }: Props) 
 export const ColorPicker = () => {
     const themes = [
         {
-            "name": "default",
+            "name": "Défaut",
             "--primary-color": "#206AC4",
             "--primary-text": "#FFFFFF",
             "--secondary-color": "#9EC9FB",
@@ -41,25 +41,7 @@ export const ColorPicker = () => {
             "--background-text": "#141414"
         },
         {
-            "name": "gpt1",
-            "--primary-color": "#206AC4",
-            "--primary-text": "#FFFFFF",
-            "--secondary-color": "#9EC9FB",
-            "--secondary-text": "#141414",
-            "--background-primary-color": "#E9F1FA",
-            "--background-text": "#141414"
-        },
-        {
-            "name": "gpt2",
-            "--primary-color": "#59AD2F",
-            "--primary-text": "#FFFFFF",
-            "--secondary-color": "#FB9E59",
-            "--secondary-text": "#141414",
-            "--background-primary-color": "#FAE9E9",
-            "--background-text": "#141414"
-        },
-        {
-            "name": "gpt3",
+            "name": "Rouge",
             "--primary-color": "#C42020",
             "--primary-text": "#FFFFFF",
             "--secondary-color": "#3E82E7",
@@ -67,51 +49,60 @@ export const ColorPicker = () => {
             "--background-primary-color": "#F1E9E9",
             "--background-text": "#141414"
         },
+        // {
+        //     "name": "gpt4",
+        //     "--primary-color": "#FF5722",
+        //     "--primary-text": "#FFFFFF",
+        //     "--secondary-color": "#21FFC4",
+        //     "--secondary-text": "#141414",
+        //     "--background-primary-color": "#4FAA92",
+        //     "--background-text": "#141414"
+        // },
+        // {
+        //     "name": "gpt5",
+        //     "--primary-color": "#FFC107",
+        //     "--primary-text": "#000000",
+        //     "--secondary-color": "#4CAF50",
+        //     "--secondary-text": "#FFFFFF",
+        //     "--background-primary-color": "#00304C",
+        //     "--background-text": "#FFFFFF"
+        // },
         {
-            "name": "gpt4",
-            "--primary-color": "#FF5722",
-            "--primary-text": "#FFFFFF",
-            "--secondary-color": "#009688",
-            "--secondary-text": "#141414",
-            "--background-primary-color": "#F5F5DC",
-            "--background-text": "#141414"
-        },
-        {
-            "name": "gpt5",
-            "--primary-color": "#FFC107",
-            "--primary-text": "#000000",
-            "--secondary-color": "#4CAF50",
-            "--secondary-text": "#FFFFFF",
-            "--background-primary-color": "#00304C",
-            "--background-text": "#FFFFFF"
-        },
-        {
-            "name": "gpt6",
+            "name": "Marron",
             "--primary-color": "#795548",
             "--primary-text": "#FFFFFF",
-            "--secondary-color": "#1D3557",
+            "--secondary-color": "#AAAAAA",
             "--secondary-text": "#141414",
             "--background-primary-color": "#F8DCBA",
             "--background-text": "#141414"
         },
+        // {
+        //     "name": "gpt7",
+        //     "--primary-color": "#f44336",
+        //     "--primary-text": "#FFFFFF",
+        //     "--secondary-color": "#8BC34A",
+        //     "--secondary-text": "#141414",
+        //     "--background-primary-color": "#FFEE58",
+        //     "--background-text": "#141414"
+        // },
+        // {
+        //     "name": "gpt8",
+        //     "--primary-color": "#9C27B0",
+        //     "--primary-text": "#FFFFFF",
+        //     "--secondary-color": "#004D40",
+        //     "--secondary-text": "#141414",
+        //     "--background-primary-color": "#FFEADC",
+        //     "--background-text": "#141414"
+        // },
         {
-            "name": "gpt7",
-            "--primary-color": "#f44336",
+            "name": "Vert",
+            "--primary-color": "#316716",
             "--primary-text": "#FFFFFF",
-            "--secondary-color": "#8BC34A",
+            "--secondary-color": "#FB9E59",
             "--secondary-text": "#141414",
-            "--background-primary-color": "#FFEE58",
+            "--background-primary-color": "#FAE9E9",
             "--background-text": "#141414"
         },
-        {
-            "name": "gpt8",
-            "--primary-color": "#9C27B0",
-            "--primary-text": "#FFFFFF",
-            "--secondary-color": "#004D40",
-            "--secondary-text": "#141414",
-            "--background-primary-color": "#FFEADC",
-            "--background-text": "#141414"
-        }
     ]
     const [visible, setVisible] = useState(false)
     const [selected, setSelected] = useState(0)

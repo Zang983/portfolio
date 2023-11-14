@@ -28,8 +28,8 @@ export const ProjectCard = ({ children, dialRef, setSelected, index, presentatio
             <img 
             src={`https://api-portfolio.kevin-kerkar.com/images/${presentation}`} 
             alt="illustration du projet" 
-            className="laptop:w-full max-w-full laptop:h-full px-3 py-1 object-contain rounded-t-xl " />
-            <figcaption className="h-[50px] flex justify-center items-center border-t-2">
+            className="laptop:w-full max-w-full h-[80%] px-3 py-1 object-contain rounded-t-xl " />
+            <figcaption className="h-[20%] flex justify-center items-center border-t-2">
                 <Typo variant="cardName" container="h2">{children}</Typo>
             </figcaption>
         </figure>
