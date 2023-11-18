@@ -3,10 +3,11 @@ import { LinkContainer } from "../linkContainer/linkContainer"
 import { GithubSVG } from "../commons/svgs/github"
 import { LinkedinSVG } from "../commons/svgs/linkedin"
 import { ContactSVG } from "../commons/svgs/contact"
+import { CvSVG } from "../commons/svgs/cvSVG"
 
 
 export const Header = () => {
-    const iconSize="45"
+    const iconSize = "45"
     return (
         <header className="
         mobile:w-full mobile:bg-[var(--primary-color)] mobile:p-0 mobile:m-0
@@ -18,39 +19,55 @@ export const Header = () => {
             </div>
             <LinkContainer links={[
                 {
+                    link: '/cv.pdf',
+                    label: "Vers mon CV au format PDF",
+                    image: <CvSVG
+                        customStyle={{
+                            width: iconSize,
+                            height: iconSize,
+                            fill: "fill-[var(--secondary-color)]",
+                            fillHover: "hover:fill-white",
+                        }} />,
+                    title: "Voir mon CV",
+                },
+                {
                     link: "https://github.com/zang983",
-                    label:"Liens vers mon profil github",
+                    label: "Liens vers mon profil github",
                     image: <GithubSVG
                         customStyle={{
                             width: iconSize,
-                            height:iconSize,
-                            fill:"fill-[var(--secondary-color)]",
-                            fillHover : "hover:fill-white"
-                        }} />
+                            height: iconSize,
+                            fill: "fill-[var(--secondary-color)]",
+                            fillHover: "hover:fill-white"
+                        }} />,
+                    title: "Profil Github !"
+
                 },
                 {
                     link: "https://www.linkedin.com/in/kevin-kerkar-8a8a56243/",
-                    label:"Liens vers mon profil linkedin",
-                    image: <LinkedinSVG 
-                    customStyle={{
-                        width:iconSize,
-                        height:iconSize,
-                        fill:"fill-[var(--secondary-color)]",
-                        fillHover : "hover:fill-white"
-                    }}/>
+                    label: "Liens vers mon profil linkedin",
+                    image: <LinkedinSVG
+                        customStyle={{
+                            width: iconSize,
+                            height: iconSize,
+                            fill: "fill-[var(--secondary-color)]",
+                            fillHover: "hover:fill-white"
+                        }} />,
+                    title: "Profil Linkedin !"
                 },
                 {
-                    link:'#formContact',
-                    label:"Ancre vers la partie contact",
-                    image:<ContactSVG 
-                    customStyle={{
-                        width:iconSize,
-                        height:iconSize,
-                        fill:"fill-[var(--secondary-color)]",
-                        fillHover : "hover:fill-white",
-                        stroke:"stroke-none"
-                    }}/>
-                }
+                    link: '#formContact',
+                    label: "Ancre vers la partie contact",
+                    image: <ContactSVG
+                        customStyle={{
+                            width: iconSize,
+                            height: iconSize,
+                            fill: "fill-[var(--secondary-color)]",
+                            fillHover: "hover:fill-white",
+                            stroke: "stroke-none"
+                        }} />,
+                    title: "Contactez-moi !"
+                },
             ]}
                 customClass="header"
             />

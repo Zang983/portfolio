@@ -4,6 +4,7 @@ interface customLink {
     link: string,
     image: React.ReactNode,
     label?: string,
+    title?:string,
 }
 interface Props {
     links: customLink[],
@@ -28,7 +29,8 @@ export const LinkContainer = ({ links, customClass }: Props) => {
             {links.map((item, index) => {
                 if (item.link !== "")
                     return <CustomLink
-                        label={item.label ? item.label : ""}
+                        title={item?.title}
+                        label={item?.label ? item.label : ""}
                         key={index}
                         link={item.link}
                         customStyleLink={customStyleLink}

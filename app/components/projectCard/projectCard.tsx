@@ -20,7 +20,7 @@ export const ProjectCard = ({ children, dialRef, setSelected, index, presentatio
         <figure
             onClick={handleClick}
             className="mobile:mt-6
-            bg-white
+            bg-white flex flex-col
             laptop:mt-0 
             relative border border-[var(--primary-color)] shadow-2xl rounded-xl w-full aspect-[16/9] cursor-pointer 
             hover:after-content-[''] hover:after:block hover:after:w-full hover:after:h-full hover:after:absolute hover:after:top-0 hover:after:left-0 hover:after:bg-black hover:after:rounded-xl hover:after:opacity-10"
@@ -28,7 +28,7 @@ export const ProjectCard = ({ children, dialRef, setSelected, index, presentatio
             <img 
             src={`https://api-portfolio.kevin-kerkar.com/images/${presentation}`} 
             alt="illustration du projet" 
-            className="laptop:w-full max-w-full h-[80%] px-3 py-1 object-contain rounded-t-xl " />
+            className=" laptop:w-full max-w-full h-[80%] px-3 py-1 object-contain rounded-t-xl " />
             <figcaption className="h-[20%] flex justify-center items-center border-t-2">
                 <Typo variant="cardName" container="h2">{children}</Typo>
             </figcaption>
